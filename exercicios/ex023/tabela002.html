@@ -11,8 +11,9 @@
         }
 
         table {
-            width: 500px;
+            max-width: 1000px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -20,9 +21,28 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+            border-bottom: 0px;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(2n) /* no lugar do (2n) tbm da para colocar o (odd) (even) (2n-1)*/ { 
+            background-color: lightgrey;
         }
 
         td.num {
@@ -35,19 +55,21 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
-        THEAD
-             TR, TD, TH
-        TBODY
-            TR, TD, TH
-        TFOOT
-            TR, TD, TH
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% da pop. total</th>
+                <th scope="col" style="width: 180px;">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+                <th scope="col" style="width: 100px;">% da pop. total</th>
             </tr>
         </thead>
         <tbody>
@@ -189,11 +211,24 @@
         </tbody>
         <tfoot>
                 <tr>
-                    <th>Total de Habtantes</th>
+                    <th scope="row">Total de Habtantes</th>
                     <td class="num">213.317.639</td>
                     <td>100%</td>
                 </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis, eos quam dolorem voluptas rerum, voluptatem ad eum impedit illo facilis voluptate veniam in accusantium rem fugit ab eligendi quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae nam repellendus modi rem culpa odit, commodi ad provident quas vel necessitatibus at. Mollitia modi recusandae et consequuntur nostrum qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa natus suscipit possimus? Magni aspernatur culpa a, sequi, sunt neque explicabo dignissimos nulla, amet omnis ab asperiores deleniti at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus recusandae nisi doloribus voluptatem quaerat quod laudantium aperiam. Tempora possimus cumque pariatur cum sed odio cupiditate eius optio esse qui?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis, eos quam dolorem voluptas rerum, voluptatem ad eum impedit illo facilis voluptate veniam in accusantium rem fugit ab eligendi quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae nam repellendus modi rem culpa odit, commodi ad provident quas vel necessitatibus at. Mollitia modi recusandae et consequuntur nostrum qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa natus suscipit possimus? Magni aspernatur culpa a, sequi, sunt neque explicabo dignissimos nulla, amet omnis ab asperiores deleniti at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus recusandae nisi doloribus voluptatem quaerat quod laudantium aperiam. Tempora possimus cumque pariatur cum sed odio cupiditate eius optio esse qui?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis, eos quam dolorem voluptas rerum, voluptatem ad eum impedit illo facilis voluptate veniam in accusantium rem fugit ab eligendi quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae nam repellendus modi rem culpa odit, commodi ad provident quas vel necessitatibus at. Mollitia modi recusandae et consequuntur nostrum qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa natus suscipit possimus? Magni aspernatur culpa a, sequi, sunt neque explicabo dignissimos nulla, amet omnis ab asperiores deleniti at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus recusandae nisi doloribus voluptatem quaerat quod laudantium aperiam. Tempora possimus cumque pariatur cum sed odio cupiditate eius optio esse qui?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis, eos quam dolorem voluptas rerum, voluptatem ad eum impedit illo facilis voluptate veniam in accusantium rem fugit ab eligendi quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae nam repellendus modi rem culpa odit, commodi ad provident quas vel necessitatibus at. Mollitia modi recusandae et consequuntur nostrum qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa natus suscipit possimus? Magni aspernatur culpa a, sequi, sunt neque explicabo dignissimos nulla, amet omnis ab asperiores deleniti at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus recusandae nisi doloribus voluptatem quaerat quod laudantium aperiam. Tempora possimus cumque pariatur cum sed odio cupiditate eius optio esse qui?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis, eos quam dolorem voluptas rerum, voluptatem ad eum impedit illo facilis voluptate veniam in accusantium rem fugit ab eligendi quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae nam repellendus modi rem culpa odit, commodi ad provident quas vel necessitatibus at. Mollitia modi recusandae et consequuntur nostrum qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa natus suscipit possimus? Magni aspernatur culpa a, sequi, sunt neque explicabo dignissimos nulla, amet omnis ab asperiores deleniti at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus recusandae nisi doloribus voluptatem quaerat quod laudantium aperiam. Tempora possimus cumque pariatur cum sed odio cupiditate eius optio esse qui?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis, eos quam dolorem voluptas rerum, voluptatem ad eum impedit illo facilis voluptate veniam in accusantium rem fugit ab eligendi quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae nam repellendus modi rem culpa odit, commodi ad provident quas vel necessitatibus at. Mollitia modi recusandae et consequuntur nostrum qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa natus suscipit possimus? Magni aspernatur culpa a, sequi, sunt neque explicabo dignissimos nulla, amet omnis ab asperiores deleniti at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus recusandae nisi doloribus voluptatem quaerat quod laudantium aperiam. Tempora possimus cumque pariatur cum sed odio cupiditate eius optio esse qui?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis, eos quam dolorem voluptas rerum, voluptatem ad eum impedit illo facilis voluptate veniam in accusantium rem fugit ab eligendi quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae nam repellendus modi rem culpa odit, commodi ad provident quas vel necessitatibus at. Mollitia modi recusandae et consequuntur nostrum qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ipsa natus suscipit possimus? Magni aspernatur culpa a, sequi, sunt neque explicabo dignissimos nulla, amet omnis ab asperiores deleniti at laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus recusandae nisi doloribus voluptatem quaerat quod laudantium aperiam. Tempora possimus cumque pariatur cum sed odio cupiditate eius optio esse qui?</p>
 </body>
 </html>
